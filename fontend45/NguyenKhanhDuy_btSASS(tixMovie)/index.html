@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tix</title>
+  <!-- font Icon -->
+  <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    /> -->
+  <!--Slick Css  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+  <!-- font icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+  <!-- owl carousel -->
+  <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
+  <!-- BS4 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <!-- Main css -->
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light tixNavbar">
+      <div class="nav-logo">
+        <img src="./img/web-logo.png" alt="" />
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTix"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTix">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Lịch Chiếu <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cụm rạp</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tin tức</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ứng dụng</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li> -->
+        </ul>
+        <div class="nav-login">
+          <div class="login">
+            <img src="./img/avatar.png" alt="" />
+            <span>Đăng Nhập</span>
+            <i class="fa fa-map-marker-alt"></i>
+          </div>
+        </div>
+        <div class="nav-local">
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Hồ Chí Minh
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Hồ Chí Minh</a>
+              <a class="dropdown-item" href="#">Hà Nội</a>
+              <a class="dropdown-item" href="#">Đà Nẵng</a>
+              <a class="dropdown-item" href="#">Hải Phòng</a>
+              <a class="dropdown-item" href="#">Nha Trang</a>
+              <a class="dropdown-item" href="#">Biên Hòa</a>
+              <a class="dropdown-item" href="#">Cần Thơ</a>
+              <a class="dropdown-item" href="#">Vũng Tàu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="tixCarousel">
+    <div id="carouselTix" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselTix" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselTix" data-slide-to="1"></li>
+        <li data-target="#carouselTix" data-slide-to="2"></li>
+        <li data-target="#carouselTix" data-slide-to="3"></li>
+        <li data-target="#carouselTix" data-slide-to="4"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./img/carousel-img1.png" class="d-block w-100" alt="..." />
+          <div class="carousel-play">
+            <button data-toggle="modal" data-target="#exampleModal">
+              <i class="fa fa-play"></i>
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./img/carousel-img2.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-play">
+            <button data-toggle="modal" data-target="#bangChungVoHinh">
+              <i class="fa fa-play"></i>
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./img/carousel-img3.png" class="d-block w-100" alt="..." />
+          <div class="carousel-play">
+            <button data-toggle="modal" data-target="#dinhSuongMu">
+              <i class="fa fa-play"></i>
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./img/carousel-img4.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-play">
+            <button data-toggle="modal" data-target="#tanTichQuyAm">
+              <i class="fa fa-play"></i>
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./img/carousel-img5.png" class="d-block w-100" alt="..." />
+          <div class="carousel-play">
+            <button data-toggle="modal" data-target="#hauDueThanSam">
+              <i class="fa fa-play"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselTix" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselTix" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+  <section class="movieList">
+    <div class="movieList__content">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#dangChieu">Đang Chiếu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#sapChieu">Sắp Chiếu</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane container active " id="dangChieu">
+          <div class="row mb-5">
+            <div class="movie_item col-3">
+              <div class="movie-img">
+                <div class="over-play"></div>
+                <button class="button-play" data-toggle="modal" data-target="#exampleModal"><i
+                    class="fa fa-play"></i></button>
+                <img src="./img/movie1.png" alt="">
+              </div>
+              <div class="movie-detail">
+                <span class="c18">C18</span>
+                Bán Đảo - Peninsula - (C18)
+              </div>
+              <div class="movie-minute">
+                <span>116 phứt</span>
+              </div>
+              <div class="get-ticket">
+                <a href="#" class="ticket">MUA VÉ</a>
+              </div>
+            </div>
+            <div class="movie_item col-3">
+              <div class="movie-img">
+                <div class="over-play"></div>
+                <button class="button-play" data-toggle="modal" data-target="#bangChungVoHinh"><i
+                    class="fa fa-play"></i></button>
+                <img src="./img/movie2.jpg" alt="">
+              </div>
+              <div class="movie-detail">
+                <span class="c18">C18</span>
+                Bán Đảo - Peninsula - (C18)
+              </div>
+              <div class="movie-minute">
+                <span>116 phứt</span>
+              </div>
+              <div class="get-ticket">
+                <a href="#" class="ticket">MUA VÉ</a>
+              </div>
+            </div>
+            <div class="movie_item col-3 ">
+              <div class="movie-img">
+                <div class="over-play"></div>
+                <button class="button-play" data-toggle="modal" data-target="#dinhSuongMu"><i
+                    class="fa fa-play"></i></button>
+                <img src="./img/movie3.jpg" alt="">
+              </div>
+              <div class="movie-detail">
+                <span class="c18">C18</span>
+                Bán Đảo - Peninsula - (C18)
+              </div>
+              <div class="movie-minute">
+                <span>116 phứt</span>
+              </div>
+              <div class="get-ticket">
+                <a href="#" class="ticket">MUA VÉ</a>
+              </div>
+            </div>
+            <div class="movie_item col-3 ">
+              <div class="movie-img">
+                <div class="over-play"></div>
+                <button class="button-play" data-toggle="modal" data-target="#tanTichQuyAm"><i
+                    class="fa fa-play"></i></button>
+                <img src="./img/movie4.png" alt="">
+              </div>
+              <div class="movie-detail">
+                <span class="c18">C18</span>
+                Bán Đảo - Peninsula - (C18)
+              </div>
+              <div class="movie-minute">
+                <span>116 phứt</span>
+              </div>
+              <div class="get-ticket">
+                <a href="#" class="ticket">MUA VÉ</a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row mb-5">
+            <div class="movie_item col-3">
+              <div class="movie-img">
+                <div class="over-play"></div>
+                <button class="button-play" data-toggle="modal" data-target="#hauDueThanSam"><i
+                    class="fa fa-play"></i></button>
+                <img src="./img/movie5.png" alt="">
+              </div>
+              <div class="movie-detail">
+                <span class="c18">C18</span>
+                Bán Đảo - Peninsula - (C18)
+              </div>
+              <div class="movie-minute">
+                <span>116 phứt</span>
+              </div>
+              <div class="get-ticket">
+                <a href="#" class="ticket">MUA VÉ</a>
+              </div>
+            </div>
+            <div class="movie_item col-3">
+              <div class="movie-img">
+                <div class="over-play"></div>
+                <button class="button-play"><i class="fa fa-play"></i></button>
+                <img src="./img/movie6.png" alt="">
+              </div>
+              <div class="movie-detail">
+                <span class="c18">C18</span>
+                Bán Đảo - Peninsula - (C18)
+              </div>
+              <div class="movie-minute">
+                <span>116 phứt</span>
+              </div>
+              <div class="get-ticket">
+                <a href="#" class="ticket">MUA VÉ</a>
+              </div>
+            </div>
+            <div class="movie_item col-3">
+              <div class="movie-img">
+                <div class="over-play"></div>
+                <button class="button-play"><i class="fa fa-play"></i></button>
+                <img src="./img/movie7.png" alt="">
+              </div>
+              <div class="movie-detail">
+                <span class="c18">C18</span>
+                Bán Đảo - Peninsula - (C18)
+              </div>
+              <div class="movie-minute">
+                <span>116 phứt</span>
+              </div>
+              <div class="get-ticket">
+                <a href="#" class="ticket">MUA VÉ</a>
+              </div>
+            </div>
+            <div class="movie_item col-3">
+              <div class="movie-img">
+                <div class="over-play"></div>
+                <button class="button-play"><i class="fa fa-play"></i></button>
+                <img src="./img/movie8.png" alt="">
+              </div>
+              <div class="movie-detail">
+                <span class="c18">C18</span>
+                Bán Đảo - Peninsula - (C18)
+              </div>
+              <div class="movie-minute">
+                <span>116 phứt</span>
+              </div>
+              <div class="get-ticket">
+                <a href="#" class="ticket">MUA VÉ</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="tab-pane container fade" id="sapChieu">
+          <div class="row mb-5">
+            <div class="movie_item col-3">
+              <div class="movie-img">
+                <div class="over-play"></div>
+                <button class="button-play" data-toggle="modal" data-target="#hauDueThanSam"><i
+                    class="fa fa-play"></i></button>
+                <img src="./img/movie9.png" alt="">
+              </div>
+              <div class="movie-detail">
+                <span class="c18">C18</span>
+                Bán Đảo - Peninsula - (C18)
+              </div>
+              <div class="movie-minute">
+                <span>116 phứt</span>
+              </div>
+              <div class="get-ticket">
+                <a href="#" class="ticket">MUA VÉ</a>
+              </div>
+            </div>
+            <div class="movie_item col-3">
+              <div class="movie-img">
+                <div class="over-play"></div>
+                <button class="button-play"><i class="fa fa-play"></i></button>
+                <img src="./img/movie10.png" alt="">
+              </div>
+              <div class="movie-detail">
+                <span class="c18">C18</span>
+                Bán Đảo - Peninsula - (C18)
+              </div>
+              <div class="movie-minute">
+                <span>116 phứt</span>
+              </div>
+              <div class="get-ticket">
+                <a href="#" class="ticket">MUA VÉ</a>
+              </div>
+            </div>
+            <div class="movie_item col-3">
+              <div class="movie-img">
+                <div class="over-play"></div>
+                <button class="button-play"><i class="fa fa-play"></i></button>
+                <img src="./img/movie11.png" alt="">
+              </div>
+              <div class="movie-detail">
+                <span class="c18">C18</span>
+                Bán Đảo - Peninsula - (C18)
+              </div>
+              <div class="movie-minute">
+                <span>116 phứt</span>
+              </div>
+              <div class="get-ticket">
+                <a href="#" class="ticket">MUA VÉ</a>
+              </div>
+            </div>
+            <div class="movie_item col-3">
+              <div class="movie-img">
+                <div class="over-play"></div>
+                <button class="button-play"><i class="fa fa-play"></i></button>
+                <img src="./img/movie12.png" alt="">
+              </div>
+              <div class="movie-detail">
+                <span class="c18">C18</span>
+                Bán Đảo - Peninsula - (C18)
+              </div>
+              <div class="movie-minute">
+                <span>116 phứt</span>
+              </div>
+              <div class="get-ticket">
+                <a href="#" class="ticket">MUA VÉ</a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row mb-5">
+            <div class="movie_item col-3">
+              <div class="movie-img">
+                <div class="over-play"></div>
+                <button class="button-play" data-toggle="modal" data-target="#hauDueThanSam"><i
+                    class="fa fa-play"></i></button>
+                <img src="./img/movie13.png" alt="">
+              </div>
+              <div class="movie-detail">
+                <span class="c18">C18</span>
+                Bán Đảo - Peninsula - (C18)
+              </div>
+              <div class="movie-minute">
+                <span>116 phứt</span>
+              </div>
+              <div class="get-ticket">
+                <a href="#" class="ticket">MUA VÉ</a>
+              </div>
+            </div>
+            <div class="movie_item col-3">
+              <div class="movie-img">
+                <div class="over-play"></div>
+                <button class="button-play"><i class="fa fa-play"></i></button>
+                <img src="./img/movie14.jpg" alt="">
+              </div>
+              <div class="movie-detail">
+                <span class="c18">C18</span>
+                Bán Đảo - Peninsula - (C18)
+              </div>
+              <div class="movie-minute">
+                <span>116 phứt</span>
+              </div>
+              <div class="get-ticket">
+                <a href="#" class="ticket">MUA VÉ</a>
+              </div>
+            </div>
+            <div class="movie_item col-3">
+              <div class="movie-img">
+                <div class="over-play"></div>
+                <button class="button-play"><i class="fa fa-play"></i></button>
+                <img src="./img/movie2.jpg" alt="">
+              </div>
+              <div class="movie-detail">
+                <span class="c18">C18</span>
+                Bán Đảo - Peninsula - (C18)
+              </div>
+              <div class="movie-minute">
+                <span>116 phứt</span>
+              </div>
+              <div class="get-ticket">
+                <a href="#" class="ticket">MUA VÉ</a>
+              </div>
+            </div>
+            <div class="movie_item col-3">
+              <div class="movie-img">
+                <div class="over-play"></div>
+                <button class="button-play"><i class="fa fa-play"></i></button>
+                <img src="./img/movie15.jpg" alt="">
+              </div>
+              <div class="movie-detail">
+                <span class="c18">C18</span>
+                Bán Đảo - Peninsula - (C18)
+              </div>
+              <div class="movie-minute">
+                <span>116 phứt</span>
+              </div>
+              <div class="get-ticket">
+                <a href="#" class="ticket">MUA VÉ</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="showTime">
+    <div class="showTime__content">
+      <!-- Nav tabs -->
+      <div class="row">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#cgv">
+              <img src="./img/cgv.png" alt="">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#bhd">
+              <img src="./img/bhd.png" alt="">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#galaxy">
+              <img src="./img/galaxy.png" alt="">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#star">
+              <img src="./img/star.png" alt="">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#ddc">
+              <img src="./img/ddc.png" alt="">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#mega">
+              <img src="./img/mega.png" alt="">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#lotte">
+              <img src="./img/lotte.png" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+
+      <!-- Tab panes -->
+
+      <div class="tab-content">
+        <div class="tab-pane container active" id="cgv">
+          <div class="left">
+            <div class="local-item active d-flex">
+              <img src="./img/cgvlocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">CGV</span>
+                <span class="text-normal">- Sư Vạn Hạnh</span>
+                <p class="text-p">Tầng 6, Vạn Hạnh Mall, 11 Sư.. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+            <div class="local-item d-flex">
+              <img src="./img/cgvlocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">CGV</span>
+                <span class="text-normal">- Aeon Bình Tân</span>
+                <p class="text-p">Tầng 3, Trung tâm thương mại.. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+            <div class="local-item d-flex">
+              <img src="./img/cgvlocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">CGV</span>
+                <span class="text-normal">- Hùng Vương Plaza</span>
+                <p class="text-p">Tầng 7, Hùng vương Plaza 126.. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+            <div class="local-item d-flex">
+              <img src="./img/cgvlocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">CGV</span>
+                <span class="text-normal">- SaiGonress Nguyễn Xí</span>
+                <p class="text-p">Tầng 4-5, Sài Gòn Plaza.. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+            <div class="local-item d-flex">
+              <img src="./img/cgvlocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">CGV</span>
+                <span class="text-normal">- Vincom Đồng Khởi</span>
+                <p class="text-p">Tầng 3, TTTM Vincom Center.. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+            <div class="local-item d-flex">
+              <img src="./img/cgvlocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">CGV</span>
+                <span class="text-normal">- Cresent Mall</span>
+                <p class="text-p">Lầu 5 Cresent Mall.. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane container fade" id="bhd">
+          <div class="left">
+            <div class="local-item active d-flex">
+              <img src="./img/bhdlocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">BHD Star</span>
+                <span class="text-normal">- Bitexco</span>
+                <p class="text-p">L3-Bitexco Icon 68, 2 Hải Triều.. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+            <div class="local-item d-flex">
+              <img src="./img/bhdlocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">BHD Star</span>
+                <span class="text-normal">- Vincom Thảo Điền</span>
+                <p class="text-p">L5-Megamall, 159 XL Hà Nội, Q.. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+            <div class="local-item d-flex">
+              <img src="./img/bhdlocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">BHD Star</span>
+                <span class="text-normal">- Phạm Hùng</span>
+                <p class="text-p">L4-Satra Phạm Hùng, C6/27 P.. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+            <div class="local-item d-flex">
+              <img src="./img/bhdlocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">BHD Star</span>
+                <span class="text-normal">- Vincom Quang Trung</span>
+                <p class="text-p">B1- Vincom Quang Trung.. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane container fade" id="galaxy">
+          <div class="left">
+            <div class="local-item active d-flex">
+              <img src="./img/galaxylocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">GLX</span>
+                <span class="text-normal">- Linh Trung</span>
+                <p class="text-p">Siêu thị Co.opXtra Thủ Đức 93.. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+            <div class="local-item d-flex">
+              <img src="./img/galaxylocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">GLX</span>
+                <span class="text-normal">- Nguyễn Du</span>
+                <p class="text-p">116 Nguyễn Du, Q.1.. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+            <div class="local-item d-flex">
+              <img src="./img/galaxylocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">GLX</span>
+                <span class="text-normal">- Trung Chánh</span>
+                <p class="text-p">TTVH Q12 – 09, Q L 22, Trung.. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+            <div class="local-item d-flex">
+              <img src="./img/galaxylocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">GLX</span>
+                <span class="text-normal">- Nguyễn Văn Quá</span>
+                <p class="text-p">119B Nguyễn Văn Quá, Đông .. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+            <div class="local-item d-flex">
+              <img src="./img/galaxylocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">GLX</span>
+                <span class="text-normal">- Phạm Văn Chí</span>
+                <p class="text-p">Lầu 5, TTTM Platinum Plaza, 6 .. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane container fade" id="star">
+          <div class="left">
+            <div class="local-item active d-flex">
+              <img src="./img/starlocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">CNS</span>
+                <span class="text-normal">- Hai Bà Trưng</span>
+                <p class="text-p">135 Hai Bà Trưng, Bến Nghé, Q.1 </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+            <div class="local-item d-flex">
+              <img src="./img/starlocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">CNS</span>
+                <span class="text-normal">- Quốc Thanh</span>
+                <p class="text-p">271 Nguyễn Trãi, Q.1 </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane container fade" id="ddc">
+          <div class="left">
+            <div class="local-item active d-flex">
+              <img src="./img/ddc.png" alt="">
+              <div class="text-local">
+                <span class="text-red">DDC</span>
+                <span class="text-normal">- Đống Đa</span>
+                <p class="text-p">890 Trần Hưng Đạo, Q.5 </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane container fade" id="mega">
+          <div class="left">
+            <div class="local-item active d-flex">
+              <img src="./img/cgvlocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">MegaGS</span>
+                <span class="text-normal">- Cao Thắng</span>
+                <p class="text-p">19 Cao Thắng, Q.3</p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane container fade" id="lotte">
+          <div class="left">
+            <div class="local-item active d-flex">
+              <img src="./img/lottelocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">Lotte</span>
+                <span class="text-normal">- Gò Vấp</span>
+                <p class="text-p">L3-Lotte Mart, 242 Nguyễn Văn </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+            <div class="local-item d-flex">
+              <img src="./img/lottelocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">Lotte</span>
+                <span class="text-normal">- Cộng Hòa</span>
+                <p class="text-p">L4-Pico Plaza, 20 Cộng Hòa, Tâ.. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+            <div class="local-item d-flex">
+              <img src="./img/lottelocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">Lotte</span>
+                <span class="text-normal">- Thủ Đức</span>
+                <p class="text-p">L2-Joy Citipoint, KCX Linh Tru.. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+            <div class="local-item d-flex">
+              <img src="./img/lottelocal.jpg" alt="">
+              <div class="text-local">
+                <span class="text-red">Lotte</span>
+                <span class="text-normal">- Nam Sài Gòn</span>
+                <p class="text-p">L3-Lotte Mart NSG, 469 Nguy.. </p>
+                <a href="#" class="text-a">[chi tiết]</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="right__content mb-3">
+          <div class="right__item d-flex">
+            <img src="./img/small-bandao.png" alt="">
+            <div class="text-right">
+              <span class="text-red">C18</span>
+              <span class="text-bold">Bán Đảo - Peninsula -</span>
+              <p class="text-p">116 phút - TIX 8.6 - IMDb 0</p>
+            </div>
+          </div>
+          <div class="right-showtime d-inline">
+            <h4 class="D2">2D Digital</h4>
+            <div class="d-flex">
+              <a href="#" class="start-time mr-2">14:50 <span class="end-time">~16:46</span></a>
+              <a href="#" class="start-time mr-2">17:20 <span class="end-time">~19:16</span></a>
+              <a href="#" class="start-time mr-2">19:00 <span class="end-time">~20:56</span></a>
+              <a href="#" class="start-time mr-2">20:00 <span class="end-time">~21:56</span></a>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="right__content mb-3">
+          <div class="right__item d-flex">
+            <img src="./img/small-movie2.jpg" alt="">
+            <div class="text-right">
+              <span class="text-red">C18</span>
+              <span class="text-bold">Bằng Chứng Vô Hình -</span>
+              <p class="text-p">100 phút - TIX 7.7 - IMDb 0</p>
+            </div>
+          </div>
+          <div class="right-showtime d-inline">
+            <h4 class="D2">2D Digital</h4>
+            <div class="d-flex">
+              <a href="#" class="start-time mr-2">14:50 <span class="end-time">~16:46</span></a>
+              <a href="#" class="start-time mr-2">17:20 <span class="end-time">~19:16</span></a>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="right__content mb-3">
+          <div class="right__item d-flex">
+            <img src="./img/small-movie3.png" alt="">
+            <div class="text-right">
+              <span class="text-red">C18</span>
+              <span class="text-bold">Ngôi Đền Kỳ Quái 2 -</span>
+              <p class="text-p">120 phút - TIX 7.7 - IMDb 0</p>
+            </div>
+          </div>
+          <div class="right-showtime d-inline">
+            <h4 class="D2">2D Digital</h4>
+            <div class="d-flex">
+              <a href="#" class="start-time mr-2">17:20 <span class="end-time">~19:16</span></a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <section class="moviePaper">
+    <div class="moviePaper__content">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs navCenter">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#home">Điện Ảnh 24h</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu1">Review</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu2">Khuyến Mãi</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane container active" id="home">
+          <div class="row paper-content">
+            <div class="col-12 col-sm-6 paper-item">
+              <img src="./img/moviepaperl1.jpg" alt="">
+              <div class="div-text">
+                <a href="#" class="text-a">Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm Chiêu</a>
+                <p class="text-justify text-p">Sau khi tiết lộ nhân tố đầu tiên là NSND Lê Khanh sẽ tiếp tục tham gia phần tiếp theo của Gái già lắm chiêu với mái tóc được cắt ngắn đầy mạnh mẽ và nam tính. Kaity Nguyễn sẽ là mỹ nhân tiếp theo nối gót hai đàn chị là Diễm My 9X và Ninh </p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 paper-item">
+              <img src="./img/moviepaperl2.png" alt="">
+              <div class="div-text">
+                <a href="#" class="text-a">5 lý do khiến bạn không thể bỏ qua bộ phim Cậu Bé Người Gỗ Pinocchio</a>
+                <p class="text-justify text-p">Không chỉ chuyển tải được giá trị của tác phẩm gốc, “Cậu Bé Người Gỗ Pinocchio” của năm 2020 còn thành công chinh phục thế hệ khán giả hiện đại với một trải nghiệm điện ảnh đầy sắc màu nhưng cũng vô cùng mới lạ. Cùng </p>
+              </div>
+
+            </div>
+          </div>
+          <div class="row paper-content2">
+            <div class="col-12 col-sm-4 left-item">
+              <img src="./img/moviepaperm1.png" alt="">
+              <div class="div-text">
+                <a href="#" class="text-a">TENET công bố ngày khởi chiếu chính thức tại Việt Nam</a>
+                <p class="text text-justify text-p">Đêm qua theo giờ Việt Nam, hãng phim Warner Bros. đưa ra thông báo chính thức về ngày khởi chiếu cho bom tấn TENET tại các thị trường bên </p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 left-item">
+              <img src="./img/moviepaperm2.png" alt="">
+              <div class="div-text">
+                <a href="#" class="text-a">Pee Nak 2 - Vạn kiếp thiên thu, đi tu không hết nghiệp!</a>
+                <p class="text text-justify text-p">Chính thức ra rạp vào ngày 03/07, Ngôi Đền Kỳ Quái 2 đã khẳng định được tên tuổi của mình trong lần trở lại này.</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 right-item">
+              <div class="d-flex small-item mb-2">
+                <img src="./img/moviepapers1.png" alt="">
+                  <a href="#" class="text-a px-2">Gerard Butler cùng bồ cũ Deadpool tham gia Greenland</a>
+              </div>
+              <div class="d-flex small-item mb-2">
+                <img src="./img/moviepapers2.jpg" alt="">
+                  <a href="#" class="text-a px-2">Diễn viên đặc biệt của Bằng Chứng Vô Hình</a>
+              </div>
+              <div class="d-flex small-item mb-2">
+                <img src="./img/moviepapers3.jpg" alt="">
+                  <a href="#" class="text-a px-2">Pee Nak 2 - Vạn kiếp thiên thu, đi tu không hết nghiệp!</a>
+              </div>
+              <div class="d-flex small-item mb-2">
+                <img src="./img/moviepapers4.png" alt="">
+                  <a href="#" class="text-a px-2">Loạt phim kinh dị không thể bỏ lỡ trong tháng 7!</a>
+              </div>
+            </div>
+          </div>
+          <div class="readmore">
+            <a href="#">XEM THÊM</a>
+          </div>
+        </div>
+        <div class="tab-pane container fade" id="menu1">
+          <div class="row paper-content">
+            <div class="col-12 col-sm-6 paper-item">
+              <img src="./img/moviepaperl3.png" alt="">
+              <div class="div-text">
+                <a href="#" class="text-a">Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm Chiêu</a>
+                <p class="text-justify text-p">Sau khi tiết lộ nhân tố đầu tiên là NSND Lê Khanh sẽ tiếp tục tham gia phần tiếp theo của Gái già lắm chiêu với mái tóc được cắt ngắn đầy mạnh mẽ và nam tính. Kaity Nguyễn sẽ là mỹ nhân tiếp theo nối gót hai đàn chị là Diễm My 9X và Ninh </p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 paper-item">
+              <img src="./img/moviepaperl4.png" alt="">
+              <div class="div-text">
+                <a href="#" class="text-a">5 lý do khiến bạn không thể bỏ qua bộ phim Cậu Bé Người Gỗ Pinocchio</a>
+                <p class="text-justify text-p">Không chỉ chuyển tải được giá trị của tác phẩm gốc, “Cậu Bé Người Gỗ Pinocchio” của năm 2020 còn thành công chinh phục thế hệ khán giả hiện đại với một trải nghiệm điện ảnh đầy sắc màu nhưng cũng vô cùng mới lạ. Cùng </p>
+              </div>
+
+            </div>
+          </div>
+          <div class="row paper-content2">
+            <div class="col-12 col-sm-4 left-item">
+              <img src="./img/moviepaperm3.png" alt="">
+              <div class="div-text">
+                <a href="#" class="text-a">TENET công bố ngày khởi chiếu chính thức tại Việt Nam</a>
+                <p class="text text-justify text-p">Đêm qua theo giờ Việt Nam, hãng phim Warner Bros. đưa ra thông báo chính thức về ngày khởi chiếu cho bom tấn TENET tại các thị trường bên </p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 left-item">
+              <img src="./img/moviepaperm4.jpg" alt="">
+              <div class="div-text">
+                <a href="#" class="text-a">Pee Nak 2 - Vạn kiếp thiên thu, đi tu không hết nghiệp!</a>
+                <p class="text text-justify text-p">Chính thức ra rạp vào ngày 03/07, Ngôi Đền Kỳ Quái 2 đã khẳng định được tên tuổi của mình trong lần trở lại này.</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 right-item">
+              <div class="d-flex small-item mb-2">
+                <img src="./img/moviepapers1.png" alt="">
+                  <a href="#" class="text-a px-2">Gerard Butler cùng bồ cũ Deadpool tham gia Greenland</a>
+              </div>
+              <div class="d-flex small-item mb-2">
+                <img src="./img/moviepapers2.jpg" alt="">
+                  <a href="#" class="text-a px-2">Diễn viên đặc biệt của Bằng Chứng Vô Hình</a>
+              </div>
+              <div class="d-flex small-item mb-2">
+                <img src="./img/moviepapers3.jpg" alt="">
+                  <a href="#" class="text-a px-2">Pee Nak 2 - Vạn kiếp thiên thu, đi tu không hết nghiệp!</a>
+              </div>
+              <div class="d-flex small-item mb-2">
+                <img src="./img/moviepapers4.png" alt="">
+                  <a href="#" class="text-a px-2">Loạt phim kinh dị không thể bỏ lỡ trong tháng 7!</a>
+              </div>
+            </div>
+          </div>
+          <div class="readmore">
+            <a href="#">XEM THÊM</a>
+          </div>
+        </div>
+        <div class="tab-pane container fade" id="menu2">
+          <div class="row paper-content">
+            <div class="col-12 col-sm-6 paper-item">
+              <img src="./img/moviepaperl5.jpg" alt="">
+              <div class="div-text">
+                <a href="#" class="text-a">Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm Chiêu</a>
+                <p class="text-justify text-p">Sau khi tiết lộ nhân tố đầu tiên là NSND Lê Khanh sẽ tiếp tục tham gia phần tiếp theo của Gái già lắm chiêu với mái tóc được cắt ngắn đầy mạnh mẽ và nam tính. Kaity Nguyễn sẽ là mỹ nhân tiếp theo nối gót hai đàn chị là Diễm My 9X và Ninh </p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 paper-item">
+              <img src="./img/moviepaperl6.jpg" alt="">
+              <div class="div-text">
+                <a href="#" class="text-a">5 lý do khiến bạn không thể bỏ qua bộ phim Cậu Bé Người Gỗ Pinocchio</a>
+                <p class="text-justify text-p">Không chỉ chuyển tải được giá trị của tác phẩm gốc, “Cậu Bé Người Gỗ Pinocchio” của năm 2020 còn thành công chinh phục thế hệ khán giả hiện đại với một trải nghiệm điện ảnh đầy sắc màu nhưng cũng vô cùng mới lạ. Cùng </p>
+              </div>
+
+            </div>
+          </div>
+          <div class="row paper-content2">
+            <div class="col-12 col-sm-4 left-item">
+              <img src="./img/moviepaperm3.png" alt="">
+              <div class="div-text">
+                <a href="#" class="text-a">TENET công bố ngày khởi chiếu chính thức tại Việt Nam</a>
+                <p class="text text-justify text-p">Đêm qua theo giờ Việt Nam, hãng phim Warner Bros. đưa ra thông báo chính thức về ngày khởi chiếu cho bom tấn TENET tại các thị trường bên </p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 left-item">
+              <img src="./img/moviepaperm4.jpg" alt="">
+              <div class="div-text">
+                <a href="#" class="text-a">Pee Nak 2 - Vạn kiếp thiên thu, đi tu không hết nghiệp!</a>
+                <p class="text text-justify text-p">Chính thức ra rạp vào ngày 03/07, Ngôi Đền Kỳ Quái 2 đã khẳng định được tên tuổi của mình trong lần trở lại này.</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 right-item">
+              <div class="d-flex small-item mb-2">
+                <img src="./img/moviepapers1.png" alt="">
+                  <a href="#" class="text-a px-2">Gerard Butler cùng bồ cũ Deadpool tham gia Greenland</a>
+              </div>
+              <div class="d-flex small-item mb-2">
+                <img src="./img/moviepapers2.jpg" alt="">
+                  <a href="#" class="text-a px-2">Diễn viên đặc biệt của Bằng Chứng Vô Hình</a>
+              </div>
+              <div class="d-flex small-item mb-2">
+                <img src="./img/moviepapers3.jpg" alt="">
+                  <a href="#" class="text-a px-2">Pee Nak 2 - Vạn kiếp thiên thu, đi tu không hết nghiệp!</a>
+              </div>
+              <div class="d-flex small-item mb-2">
+                <img src="./img/moviepapers4.png" alt="">
+                  <a href="#" class="text-a px-2">Loạt phim kinh dị không thể bỏ lỡ trong tháng 7!</a>
+              </div>
+            </div>
+          </div>
+          <div class="readmore">
+            <a href="#">XEM THÊM</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="banner">
+    <div class="banner__content">
+      <h3 class="text-h3">Ứng dụng tiện lợi dành cho
+        người yêu điện ảnh</h3>
+      <p class="text-p">Không chỉ đặt vé, bạn còn có thể bình luận phim, chấm điểm rạp và đổi quà hấp dẫn.</p>
+      <a href="#" class="text-a">App miễn phí - Tải về ngay!</a>
+      <p class="text-p2">TIX có hai phiên bản iOS & Android</p>  
+    </div>
+    
+  </section>
+  <footer>
+    <div class="footer__content">
+      <div class="row pt-3 item">
+        <div class="col-12 col-md-4 item-left">
+          <p class="title">TIX</p>
+          <div class="left d-flex">
+            <div class="left-a mr-5">
+              <p>FAQ</p>
+              <p>Brand Guidilines</p>
+            </div>
+            <div class="left-b">
+              <p class="b1">Thỏa thuận sử dụng</p>
+              <p>Chính sách bảo mật</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-4 item-center">
+          <p class="title">ĐỐI TÁC</p>
+          <div class="middle">
+            <div class="icon">
+              <img src="./img/cgv.png" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/bhd.png" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/galaxy.png" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/star.png" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/lotte.png" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/mega.png" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/beta.jpg" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/ddc.png" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/tough.png" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/cinemax.jpg" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/starlight.png" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/dcine.png" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/zalopay_icon.png" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/payoo.jpg" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/VCB.png" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/AGRIBANK.png" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/VIETTINBANK.png" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/IVB.png" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/123go.png" alt="">
+            </div>
+            <div class="icon">
+              <img src="./img/laban.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-4 item-right row">
+          <div class="ml-5 div-right mobile">
+            <p class="title">MOBILE</p>
+            <div class="right">
+              <div class="mr-5">
+                <span><img src="./img/apple.png" alt=""></span>
+                <span><img src="./img/android.png" alt=""></span>
+              </div>
+            </div>
+          </div>
+          <div class="ml-3 div-right social">
+            <p class="title">SOCIAL</p>
+            <div class="right">
+              <div class="mr-5 right-icon">
+                <span class="facebook"><img src="./img/facebook-logo.png" alt=""></i></span>
+                <span class="zalo"><img src="./img/zalo-logo.png" alt=""></span>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+      <div class="row pt-2 item-2">
+        <div class="col-12 col-md-1 zion">
+          <img src="./img/zion-logo.jpg" alt="">
+        </div>
+        <div class="col-12 col-md-9 text">
+         <span>TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</span>
+         <p class="mb-0">Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh, Việt Nam.</p>
+         <p class="mb-0">Giấy chứng nhận đăng ký kinh doanh số: 0101659783,<br>
+          đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020 do Sở kế hoạch và đầu tư Thành phố Hồ Chí Minh cấp.</p>
+          <p>Số Điện Thoại (Hotline): 1900 545 436<br>
+            Email: <a href="#">support@tix.vn</a></p>
+        </div>
+        <div class="col-12 col-md-1 img-right">
+          <img src="./img/bocongthuong.png" alt="">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BS4 JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+  <!-- Modal BS4-->
+  <!-- Bán đảo Penisulla -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <iframe class="video__content" width="460" height="315" src="https://www.youtube.com/embed/dgUAoEIeigo"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bằng chứng vô hình -->
+  <div class="modal fade" id="bangChungVoHinh" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <iframe class="video__content" width="560" height="315" src="https://www.youtube.com/embed/f-xgoLkpCcg"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Đỉnh sương mù -->
+  <div class="modal fade" id="dinhSuongMu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <iframe class="video__content" width="560" height="315" src="https://www.youtube.com/embed/n78pJ_qsuw8"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Tàn tích quỷ ám -->
+  <div class="modal fade" id="tanTichQuyAm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <iframe class="video__content" width="560" height="315" src="https://www.youtube.com/embed/VMxp0LYtrKE"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hậu duệ thần sấm -->
+  <div class="modal fade" id="hauDueThanSam" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <iframe class="video__content" width="560" height="315" src="https://www.youtube.com/embed/y2u2rJL_lDM"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Owl Carousel JS -->
+  <script src="./js/owl.carousel.min.js"></script>
+  <script>
+    $(".owl-carousel ").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 3,
+        },
+        1000: {
+          items: 5,
+        },
+      },
+    });
+  </script>
+  <!-- slick -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script>
+    $('.slider-nav').slick({
+      autoplay: false,
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      //asNavFor: '.slider-for',
+      dots: true,
+      focusOnSelect: true
+
+    });
+  </script>
+
+
+
+
+
+
+</body>
+
+</html>

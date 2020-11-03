@@ -1,0 +1,69 @@
+@mixin styleText($color,$fs,$fw){
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+@mixin styleButtons($bg-color,$border-color,$border-radius,$pd-y,$pd-x) {
+    background-color:$bg-color;
+    border: 1px solid $border-color;
+    border-radius:$border-radius ;
+    padding:$pd-y $pd-x;
+}
+
+@mixin styleButtonHover($bg-hover,$border-hover,$color-hover) {
+    background-color:$bg-hover ;
+    border-color: $border-hover;
+    color:$color-hover ;
+}
+
+@mixin styleFormSearch($bg-color,$border,$border-focus){
+    .input-group {
+        background-color:$bg-color ;
+        border: 1px solid $border;
+        .form-control {
+            background-color: transparent;
+            border-color: transparent;
+            box-shadow: none;
+            transition: none;
+            &:focus {
+                background-color: $color-white-0;
+                border-color: $border-focus;
+                border-right-color: transparent;
+                // &:focus + .input-group-append
+                & + .input-group-append {
+                    .input-group-text {
+                        background-color: $color-white-0;
+                        border-color: $border-focus;
+                        border-left-color: transparent;
+                        &:hover {
+                            background-color: $color-red-0;
+                            color: $color-white-0;
+                        }
+                    }
+                }
+            }
+        }
+        .input-group-text {
+            background-color: transparent;
+            border-color: transparent;
+            color: $color-red-0;
+            &:hover {
+                background-color: $color-red-0;
+                color: $color-white-0;
+            }
+        }
+    }
+}
+
+@mixin responsive($screen) {
+   @if( map-has-key($map:$breakpoints, $key:$screen)){
+    //nếu tìm thấy tên màn hình,vd: screen: small
+    $value: map-get($map:$breakpoints , $key:$screen );
+    @media screen and (max-width:$value){
+        @content;
+    }
+   } 
+   @else{
+       @warn "không tìm thấy màn hình";
+   }
+}

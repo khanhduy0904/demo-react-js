@@ -1,0 +1,111 @@
+.moviePaper {
+  .moviePaper__content {
+    width: 70%;
+    margin: 0 auto;
+    .nav-tabs {
+      border: none;
+      //margin-left: 30%;
+      text-align: center !important;
+      padding-left: 30%;
+      .nav-item {
+        border: none;
+        .nav-link {
+          @include styleText($color-black-0, $fs-2, $fw-bold);
+          transition: all 0.3s;
+          border: none;
+          &:hover {
+            @include styleText($color-black-0, $fs-2 + 2, $fw-bold);
+          }
+        }
+        .nav-link.active {
+          @include styleText($color-red-0, $fs-2 + 2, $fw-bold);
+        }
+      }
+    }
+    .tab-content {
+      .paper-content {
+        .paper-item {
+          img {
+            width: 100%;
+            border-radius: $border-radius;
+          }
+          .div-text {
+            .text-a {
+              @include styleText($color-black-0, $fs-0, $fw-bold);
+              text-decoration: none;
+            }
+            .text-p {
+              @include styleText($color-gray, $fs-1, $fw-normal);
+              line-height: 1rem;
+            }
+          }
+        }
+      }
+      .paper-content2 {
+        .left-item {
+          img {
+            width: 100%;
+            border-radius: $border-radius;
+          }
+          .div-text {
+            .text-a {
+              @include styleText($color-black-0, $fs-0, $fw-bold);
+              text-decoration: none;
+            }
+            .text-p {
+              @include styleText($color-gray, $fs-1, $fw-normal);
+              line-height: 1rem;
+            }
+          }
+        }
+        .right-item {
+          .small-item {
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: $border-radius;
+            }
+            .text-a {
+              @include styleText($color-gray, $fs-0, $fw-normal);
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .readmore {
+        margin-top: 100px;
+        padding-left: 40%;
+        margin: 0 auto;
+        a {
+          padding: 8px;
+          border: 1px solid gray;
+          text-decoration: none;
+          background-color: white;
+          border-radius: $border-radius;
+          @include styleText($color-gray, $fs-2 - 2, $fw-bold);
+          &:hover {
+            background-color: $color-red-0;
+            @include styleText($color-white-0, $fs-2 - 2, $fw-bold);
+            border-color: $color-red-0;
+          }
+        }
+      }
+    }
+  }
+  @include reponsive("medium") {
+    .moviePaper__content {
+      width: 100% !important ;
+      .nav-tabs {
+        padding-left: 15%;
+      }
+    }
+  }
+  @include reponsive("small") {
+    .moviePaper__content {
+      width: 100% !important ;
+      .nav-tabs {
+        padding-left: 5%;
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+footer {
+  width: 100%;
+  height: 400px;
+  background-color: #222222;
+  .footer__content {
+    width: 70%;
+    margin: 0 auto;
+    .item {
+      .item-left {
+        color: gray;
+        .title {
+          @include styleText($color-white-0, $fs-1, $fw-normal);
+        }
+        .left {
+          @include styleText($color-gray, $fs-1, $fw-normal);
+        }
+      }
+      .item-center {
+        .title {
+          @include styleText($color-white-0, $fs-1, $fw-normal);
+        }
+        .middle {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          .icon {
+            width: 40px;
+            margin-bottom: 14px;
+            img {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              background-color: white;
+            }
+          }
+        }
+      }
+      .item-right {
+        .div-right {
+          .title {
+            @include styleText($color-white-0, $fs-1, $fw-normal);
+            //text-align: center;
+          }
+          .right {
+            span {
+              img {
+                width: 25px;
+                height: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+    hr {
+      color: white;
+    }
+    .item-2 {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: white;
+      }
+      .zion {
+        img {
+          border-radius: $border-radius;
+          width: 80px;
+          height: 38px;
+        }
+      }
+      .text {
+        @include styleText($color-white-0, $fs-1, $fw-normal);
+        margin-left: 5px;
+      }
+      .img-right {
+        padding-left: 60px;
+        img {
+          width: 100px;
+          height: 55px;
+        }
+      }
+    }
+  }
+  @include reponsive("medium") {
+    //height: 600px;
+    .footer__content {
+      .item {
+        .item-left {
+          .title {
+            display: none;
+          }
+          .left {
+            .left-a {
+              display: none;
+            }
+            .left-b {
+              display: flex;
+              .b1 {
+                margin: 0 20px;
+              }
+            }
+          }
+        }
+        .item-center {
+          display: none;
+        }
+        .item-right {
+          .mobile {
+            display: none;
+          }
+          .social {
+            .title {
+              display: none;
+              .right-icon {
+                display: flex;
+                .facebook {
+                  margin-left: 50px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .item-2 {
+        .zion {
+          padding-left: 30% !important;
+          margin-left: 30px !important;
+        }
+        .img-right {
+          padding-left: 35% !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+// Khai báo biến
+$color-red: red;
+
+
+
+h1{
+    background-color: $color-red;
+}
+.section1{
+    h2{
+        background-color: $color-red;
+    }
+    button{
+        background-color: $color-red;
+        // parent selector
+        // & đại diện thẻ đang chứa nó
+        &:hover{
+            background-color: salmon;
+        }
+    }
+}
+// extend : kế thừa
+.section2{
+    @extend .section1;
+}
+// Placeholder
+%placeholder{
+    h2{
+        background-color: yellow;
+    }
+    button{
+        background-color: blue;
+    }
+}
+.section2{
+    @extend %placeholder;
+}
+.section3{
+    @extend %placeholder;
+}
+// mixin
+// mixin ko có tham số
+@mixin styleSection(){
+    h2{
+        background-color: green;
+    }
+    button{
+        background-color: brown;
+    }
+}
+.section3{
+    @include styleSection;
+}
+// có tham số
+@mixin styleSection2($bg-h2,$bg-button){
+    h2{
+        background-color: $bg-h2;
+    }
+    button{
+        background-color: $bg-button;
+    }
+}
+.section4{
+    @include styleSection2(purple, $color-red);
+}

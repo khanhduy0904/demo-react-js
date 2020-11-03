@@ -1,0 +1,147 @@
+/* GLOBAL */
+*{
+    box-sizing: border-box;
+    /* Khai báo để dùng padding ko bị đẩy xuống hàng */
+}
+
+/* HEADER */
+.clear{
+    clear: both;
+} 
+.vuslogo{
+    float: left;
+}
+.slogan{
+    text-align: right;
+}
+.header ul{
+    list-style: none; 
+}
+.header ul a{
+    text-decoration: none;
+}
+.header li{
+    display: inline;
+    font-size: 16px;
+    margin:  0 5px;
+    
+}
+/* .header__slogan{
+    text-align: right;
+} */
+/* CAROUSEL */
+.carousel{
+    background-image: url("../img/slider_1.png");
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* INTRO */
+.intro{
+    text-align: center;
+}
+/* PROGRAM */
+.program{
+    text-align: center;
+}
+.program__item{
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+}
+.program__item h4{
+    color: red;
+}
+/* NEW & EVENT */
+.tieude{
+    text-align: center;
+}
+.new__left, .new__right{
+    float: left;
+    width: 50%;
+}
+.new__left{
+    position: relative;
+}
+.new__item0 p{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.603);
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+}
+.new__item{
+    float: left;
+    width: 50%;
+    padding: 0px 10px 10px;
+}
+.new__item img{
+    width: 100%;
+    display: block;
+    padding-bottom: 10px;
+}
+.new__item0 img, .new__item0 p{
+    width: 100%;
+    display: block;
+}
+.new__itemright{
+    position: relative;
+}
+.new__item1 p{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.603);
+    text-align: left;
+    position: absolute;
+    width: 100%;
+    display: block;
+}
+/* NEW(TIN TỨC) */
+.bentrai, .benphai{
+    float: left;
+    width: 50%;
+}
+.bentrai{
+    padding: 10px;
+}
+.bentrai img{
+    width: 100%;
+} 
+.chuahinhtrai{
+    position: relative;
+}
+.bentrai p{
+    position: absolute;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.603);
+    text-align: center;
+    bottom: 5px;
+}
+.divnho{
+    float: left;
+    width: 50%;
+    padding: 10px 10px 0px;
+}
+.chuahinhphai{
+    position: relative;
+}
+.chuahinhphai img{
+    width: 100%;
+}
+.chuahinhphai p{
+    position: absolute;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.603);
+    text-align: left;
+    bottom: 5px;
+}
+.hinh34{
+    padding-top: 4px;
+}
+.chuahinhtrai hr{
+    color: red;
+    background: red;
+    border: 0;
+    height: 2px;
+}

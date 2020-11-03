@@ -1,0 +1,34 @@
+.categories {
+  margin-top: $mg-2;
+  margin-bottom: $mg-2 + 20;
+  .categories__content {
+    width: 80%;
+    margin: 0 auto;
+    h2 {
+      @include styleText($color-black-0, $fs-3, $fw-bold-1);
+    }
+    .categories__item {
+      .categories__detail {
+        .detail__icon {
+          padding: 5px 15px;
+          border: 1px solid rgba(114, 109, 109, 0.432);
+          width: 100%;
+          margin-bottom: $mg-1;
+          &:hover{
+            box-shadow: 0 0 5px 0.3rem rgba(158, 164, 170, 0.25);
+        }
+        }
+        .icon {
+          font-size: $fs-3;
+          margin-right: $mg-1;
+          padding: 10px 0;
+        }
+        p {
+          line-height: 20px;
+          margin-bottom: 0;
+          padding: 15px 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.comment {
+  background-color: #0a2029;
+  height: auto;
+  .nav-tabs {
+    border: none;
+    margin-left: 35%;
+    .nav-item {
+      border: none;
+      .nav-link {
+        @include styleText($color-black-0, $fs-2, $fw-bold);
+        transition: all 0.3s;
+        border: none;
+        &:hover {
+          @include styleText($color-black-0, $fs-2 + 2, $fw-bold);
+        }
+      }
+      .nav-link.active {
+        @include styleText($color-red-0, $fs-2 + 2, $fw-bold);
+        background-color: #0a2029;
+        //color: white;
+      }
+    }
+  }
+  .tab-content {
+    .content1 {
+      padding-bottom: 100px;
+      .before-info {
+        font-size: 14px;
+        .movie-info {
+          color: white;
+          .text-left {
+            padding-left: 70px;
+          }
+          .text-right {
+            text-align: left;
+            padding-left: 50px;
+          }
+
+          .text-right2 {
+            padding-left: 103px;
+          }
+          .text-right3 {
+            padding-left: 100px;
+          }
+          .text-right4 {
+            padding-left: 92px;
+          }
+        }
+        .new {
+          padding-left: 70px;
+          .text-p {
+            @include styleText($color-white-0, $fs-1 + 3, $fw-normal);
+          }
+          img {
+            width: 100%;
+          }
+          .text-red {
+            @include styleText($color-white-0, $fs-1 + 3, $fw-normal);
+            padding-top: 5px;
+            text-decoration: none;
+            transition: all 0.5s;
+            &:hover {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+    .content2 {
+      padding-top: 50px;
+      padding-bottom: 100px;
+      .comment__detail {
+        width: 60%;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: $border-radius;
+        padding: 10px 0;
+        .comment__text {
+          justify-content: space-between;
+          .div-logo {
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+            }
+          }
+          .star {
+            font-size: 20px;
+            color: red;
+            padding-top: 10px;
+            opacity: 0.5;
+          }
+          .star2 {
+            font-size: 8px;
+            color: red;
+            padding-top: 10px;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+  @include reponsive("medium") {
+    .tab-content {
+      .tab-pane{
+        .before-info {
+          .movie-info{
+            .text-left{
+              padding-left: 15px !important;
+            }
+          }
+          .new {
+            padding-left: 10px !important;
+          }
+        }
+      }
+     
+    }
+  }
+}

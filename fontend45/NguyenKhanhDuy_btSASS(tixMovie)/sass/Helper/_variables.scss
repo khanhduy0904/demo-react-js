@@ -1,0 +1,28 @@
+// variable color
+$color-black-0: #29303b; // default
+$color-white-0: #fff; //default
+$color-red-0: #fa5238;
+$color-gray: #949494;
+
+// variable font-size
+$fs-0: 15px; //default
+$fs-1: 13px;
+$fs-2: 20px;
+$fs-3: 24px;
+$fs-4: 40px;
+
+//variable border-radius
+$border-radius: 5px;
+
+//variable font-weight
+$fw-normal: normal;
+$fw-bold-0: 600;
+$fw-bold-1: 700;
+$fw-bold: bold;
+
+$breakpoints: (
+  "extra-large": 1200px,
+  "large": 992px,
+  "medium": 768px,
+  "small": 576px,
+);

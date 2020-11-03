@@ -1,0 +1,69 @@
+#carouselTix {
+  .carousel-indicators {
+    li {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $color-gray;
+      border: 0px solid $color-gray;
+      opacity: 1;
+      background-clip: border-box;
+    }
+    li.active {
+      background-color: $color-red-0;
+    }
+  }
+  .carousel-inner {
+    &:hover {
+      .carousel-item {
+        .carousel-play {
+          opacity: 1;
+        }
+      }
+    }
+    .carousel-item {
+      .carousel-play {
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        text-align: center;
+        line-height: 20px;
+        transition: all 0.5s;
+        button {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          color: $color-white-0;
+          background-color: transparent;
+          border: 2px solid white;
+          transition: all 0.5s;
+          &:focus {
+            outline: none;
+          }
+          &:hover {
+            background-color: rgba(202, 200, 200, 0.2);
+            border-color: $color-gray;
+            color: $color-gray;
+          }
+        }
+      }
+    }
+  }
+  // reponsive
+  @include reponsive('medium'){
+    .carousel-inner{
+      .carousel-item{
+        .carousel-play{
+          button {
+            width: 60px;
+            height: 60px;
+          }
+        }
+      }
+    }
+    
+  }
+}

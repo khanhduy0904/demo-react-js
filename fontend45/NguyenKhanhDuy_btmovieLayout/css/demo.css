@@ -1,0 +1,46 @@
+/* Media Query */
+/* type: screen, speech, print, all */
+@media screen and (max-width:1000px){
+    /* code css */
+}
+
+/* áp dụng cho tất cả màn hinh */
+h1{
+    background-color: red;
+    color: white;
+}
+/* desktop first */
+/* max-width */
+/* màn hình lớn trước */
+@media screen and (max-width:1200px){
+    h1{
+        background-color: yellow;
+    }
+}
+@media screen and (max-width:900px){
+    h1{
+        background-color: blue;
+    }
+}
+/* Mobile first */
+/* min-width */
+/* màn hình nhỏ trước */
+h2{
+    background-color: pink;
+}
+@media screen and (min-width:700px){
+    h2{
+        background-color: blue;
+    }
+}
+@media screen and (min-width:1000px){
+    h2{
+        background-color: red;
+    }
+}
+@media screen and (max-width:1000px) and (min-width:900px){
+    h2{
+        background-color: purple
+    }
+}
+

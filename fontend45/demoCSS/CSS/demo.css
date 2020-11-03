@@ -1,0 +1,22 @@
+h1{
+    font-size: 30px;
+
+}
+h2{
+    background-color: blue;
+    background-color: teal;
+}
+.heading2{
+    font-size: 40px;
+}
+#Heading{
+    color: white;
+    background-color: violet;
+}
+/* Độ ưu tiên: id(100)->class(10)->tên thẻ(1) */
+.section1 #Heading{
+  background-color: green;  
+}
+.heading2#Heading{
+    background-color: greenyellow;
+} 

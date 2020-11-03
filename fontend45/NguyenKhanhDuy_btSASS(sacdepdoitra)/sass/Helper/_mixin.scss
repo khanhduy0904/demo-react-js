@@ -1,0 +1,18 @@
+@mixin styleText($color,$fs,$fw){
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin reponsive($screen){
+    @if(map-has-key($map: $breakpoints, $key: $screen)){
+        //Nếu tìm thấy tên màng hình,vd: screen:small
+        $value: map-get($map: $breakpoints, $key: $screen );
+        @media screen and(max-width:$value){
+            @content;
+        }
+    }
+    @else{
+        @warn "Không tìm thấy màn hình";
+    }
+}

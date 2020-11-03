@@ -1,0 +1,70 @@
+@mixin styleText($color,$fs,$fw){
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+@mixin styleBottom($bg-color,$boder-color,$border-radius,$pd-y,$pd-x){
+    background-color: $bg-color;
+    border: 1px solid $boder-color;
+    padding: $pd-y $pd-x;
+    border-radius: $border-radius;
+
+}
+@mixin styleButtonHover($bg-hover,$border-hover,$color-hover) {
+    background-color: $bg-hover;
+    border-color: $border-hover;
+    color: $color-hover;
+}
+@mixin styleFormSearch($bg-color,$boder,$border-focus){
+    .input-group{
+        background-color: $bg-color;
+        border: 1px solid $boder;
+        .form-control{
+            background-color: transparent;
+            border-color: transparent;
+            box-shadow: none;
+            transition: none;
+            &:focus{
+                background-color: $color-white-0;
+                border: $border-focus;
+                border-right-color: transparent;
+                & + .input-group-append {
+                    .input-group-text{
+                        background-color: $color-white-0;
+                        border: $border-focus;
+                        border-left-color: transparent;
+                        &:hover{
+                            color: $color-white-0;
+                            background-color: $color-red-0;
+                        }
+                    }
+                    
+                }
+            }
+            // &:focus + .input-group-append{}
+        }
+        .input-group-text{
+            background-color: transparent;
+            border-color: transparent;
+            color: $color-red-0;
+            border-radius: 0;
+            &:hover{
+                color: $color-white-0;
+                background-color: $color-red-0;
+            }
+        }
+        
+    }
+}
+@mixin reponsive($screen){
+    @if(map-has-key($map: $breakpoints, $key: $screen)){
+        //Nếu tìm thấy tên màng hình,vd: screen:small
+        $value: map-get($map: $breakpoints, $key: $screen );
+        @media screen and(max-width:$value){
+            @content;
+        }
+    }
+    @else{
+        @warn "Không tìm thấy màn hình";
+    }
+}

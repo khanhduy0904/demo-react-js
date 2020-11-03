@@ -1,0 +1,42 @@
+.companies{
+    background-color: #f7f8fa;
+    padding-top: $pd-2 + 10;
+    .companies__content{
+        h3{
+            @include styleText($color-black-light,$fs-1,$fw-normal);
+            text-align: center;
+        }
+        width: 80%;
+        margin: 0 auto;
+        .companies__content-item{
+            display: flex;
+            .companies__item{
+                display: flex;
+                margin: 0 30px;
+                .div-img{
+                    img{
+                        width: 100%;
+                    }
+                }
+                
+            }
+        }
+    }
+    .companies__content2{
+        padding-top: $pd-2;
+        // width: 80%;
+        // margin: 0 auto;
+        text-align: center;
+        h3{
+            @include styleText($color-black-light,$fs-2 - 1,$fw-bold);
+        }
+        p{
+            @include styleText($color-black-0,$fs-1,$fw-normal);
+            padding-bottom: $pd-1;
+        }
+        .start-left{
+            border-right: 1px solid #dedfe0;
+        }
+    }
+
+}

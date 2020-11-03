@@ -1,0 +1,55 @@
+header{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
+    .tixNavbar{
+    
+        .nav-logo{
+            margin-right: 32%;
+            img{
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .navbar-collapse{
+            
+            .navbar-nav{
+                margin-right: 34%;
+                .nav-item{
+                    .nav-link{
+                        @include styleText($color-black-0,$fs-1 + 1,$fw-bold-0);
+                        transition: all 0.5s;
+                        &:hover{
+                            color: $color-red-0;
+                        }
+                    }
+                }
+            }
+            .nav-login{
+                @include styleText($color-gray,$fs-1,$fw-normal);
+                .login{
+                    img{
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                    }
+                    i{
+                        font-size: $fs-2 - 4;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .nav-local{
+                @include styleText($color-gray,$fs-1,$fw-normal);
+                .dropdown{
+                    a{
+                        text-decoration: none;
+                        @include styleText($color-gray,$fs-1,$fw-normal);
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

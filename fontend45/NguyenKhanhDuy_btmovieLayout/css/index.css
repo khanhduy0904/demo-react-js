@@ -1,0 +1,642 @@
+/* Global */
+html,body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+/* Header */
+header{
+    position: absolute;
+    z-index: 100;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.header-2{
+    background-color: #101010;
+    position: fixed;
+    z-index: 150;
+    width: 100%;
+    transition: all 0.5s;
+    visibility: hidden;
+}
+/* scroll hiện nav */
+.menu-hien-ra{
+    transition: all 1s;
+    visibility: visible;
+}
+.header-2__content img{
+    width: 100%;
+}
+.header-2__content{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+}
+/* .header-2__content nav{
+    padding: 20px 0 0;
+} */
+/* .header-2__content ul li{
+    display: inline;
+    list-style: none;
+    
+}
+.header-2__content ul li a{
+    text-decoration: none;
+    color: white;
+} */
+.header-2__navbar .nav-item .nav-link{
+    padding: 10px 25px;
+    color: white;
+    font-size: 14px;
+}
+.header-2__navbar .nav-item.active .nav-link{
+    color: #fbbd61;
+}
+.header-2__navbar .nav-item::after{
+    content: "";
+    height: 3px;
+    width: 0;
+    background: linear-gradient(to right, #fbbd61,#ec7532);
+    transition: all 0.5s;
+    display: block;
+}
+.header-2__navbar .navbar-nav .nav-item:hover::after{
+    width: 100%;
+}
+.header-2__navbar .navbar-nav .nav-item.active:after{
+    width: 100%;
+}
+.header-2__navbar .icon1{
+    color: #fbbd61;
+}
+#movieNavbar .navbar-nav{
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}
+#movieNavbar .navbar-nav .nav-item::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    display: block;
+    background: linear-gradient(to right,#fbbd61,#ec7532);
+    /* color:#fbbd61,#ec7532  */
+    transition: all 0.5s;
+}
+#movieNavbar .navbar-nav .nav-item:hover::after{
+    width: 100%;
+}
+#movieNavbar .navbar-nav .nav-item.active::after{
+   width: 100%;
+}
+.button__orange i{
+    color: #fbbd61;
+}
+#movieNavbar ul li a{
+    margin: 0 15px;
+    font-size: 18px;
+}
+/* header phụ */
+
+    
+/* Carousel */
+/* mới */
+.carousel-item__overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top,black, transparent);
+}
+.carousel-item__caption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.carousel-item__caption .title{
+    color: #fbbd61;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.carousel-item__caption p{
+    font-size: 18px;
+    padding-right: 20%;
+    color: white;
+}
+.carousel-item__trailer span{
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    line-height: 40px;
+}
+.carousel-item__trailer .btn-orange{
+    background: linear-gradient(to right,#fbbd61,#ec7532);
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+#carousel .carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1.5px solid white;
+    opacity: 1;
+    background-clip: border-box;
+}
+#carousel .carousel-indicators li.active{
+    background-color: white;
+}
+#carousel .carousel-indicators{
+    justify-content: flex-start;
+    left: 50%;
+    transform: translateX(-85%);
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    bottom: 50px;
+}
+.carousel-item{
+    height: 600px;
+}
+.movieCarousel .item-1{
+    background-image: url("../img/hero-1.jpg");
+    background-size: cover;
+}
+.movieCarousel .item-2{
+    background-image: url("../img/hero-2.jpg");
+    background-size: cover;
+}
+.movieCarousel .item-3{
+    background-image: url("../img/hero-3.jpg");
+    background-size: cover;
+} */
+/* cũ */
+/* #MovieCarousel .carousel-item .carousel-item__caption{
+    text-align: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#MovieCarousel .carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid white;
+    opacity: 1;
+    background-clip: border-box;
+} 
+#MovieCarousel .carousel-indicators li.active{
+    background-color: white;
+}
+#MovieCarousel .carousel-indicators{
+    justify-content: flex-start;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.carousel-caption span{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+.carousel-item .tiltle{
+    color:#fbbd61;
+}
+.carousel-item h2{
+    font-size: 3rem;
+}
+.carousel-item .content{
+    padding-right: 25%;
+    font-size: 18px;
+}
+.btn-orange{
+    background: linear-gradient(to right, #fbbd61,#ec7532);
+    border: none;
+    border-radius: 40px;
+    font-size: 14px;
+    padding: 10px 30px;
+    color: white;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.carousel__trailer{
+    display: flex;
+}
+.movieCarousel .carousel-item{
+    height: 800px;
+}
+.movieCarousel .item-1{
+    background-image: url("../img/hero-1.jpg");
+    background-size: cover;
+}
+.movieCarousel .item-2{
+    background-image: url("../img/hero-2.jpg");
+    background-size: cover;
+}
+.movieCarousel .item-3{
+    background-image: url("../img/hero-3.jpg");
+    background-size: cover;
+} */
+
+
+/* New In */
+.newIn__title{
+    padding-top: 30px; 
+    margin-bottom: 40px;
+    text-align: left;
+    margin-top: 50px;
+   
+   
+}
+.newIn__title h3{
+    color: #ec7532;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    padding-bottom: 15px;
+    position: relative;
+    
+}
+.newIn__title h3::after{
+    content:"";
+    width: 160px;
+    height: 3px;
+    background: linear-gradient(to right, #fbbd61,#ec7532);
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    
+}
+.newIn__img{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.newIn__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to bottom,#fbbd61,#ec7532);
+    opacity: 0.6;
+    transform: skewX(30deg) translateX(-150%);
+    transition: all 0.5s;   
+}
+.newIn__img:hover .newIn__overlay{
+    transform: skewX(30deg) translateX(-25%);
+}
+.newIn__img a{
+    text-decoration: none;
+    color: white;
+}
+.newIn__play{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.newIn__play i{
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin: 10px auto;
+    line-height: 80px;
+}
+.newIn__title a{
+    line-height: 2px;
+    margin-bottom: 10px;
+}
+.newIn__img:hover .newIn__play{
+    opacity: 1;
+}
+.movie__name{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.movie__star{
+    color: #fbbd61;
+}
+.star__detail{
+    color: rgba(128, 128, 128, 0.603);
+}
+/* Showw time */
+.showtimes .nav-tabs .nav-link{
+    position: relative;
+    color: #4a4a4a;
+    margin: 10px 20px;
+}
+.nav-tabs {
+    border-bottom: none;
+}
+.showtimes .nav-tabs .nav-link::after{
+    content:'';
+    width: 0px;
+    height: 3px;
+    background: linear-gradient(to right, #fbbd61,#ec7532);
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    transition: all 0.5s;
+}
+.showtimes .nav-tabs .nav-link.active{
+    color: #ec7532;
+}
+.showtimes .nav-tabs .nav-item .nav-link.active::after{
+    width: 100%;
+}
+.showtimes .nav-tabs .nav-link:hover::after{
+    width: 100%;
+}
+.showtimes .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active, .showtimes .nav-tabs .nav-link  {
+    border: none;
+}
+.showtime__detail{
+    margin-bottom: 20px;
+}
+.showtime__detail .showtime__img{
+    border-radius: 10px;
+}
+.showtime__orange .showtime__p-orange{
+    color: #ec7532;
+    padding-top: 10px;
+}
+.showtime__orange .showtime__a-orange{
+    color: #ec7532;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+.showtime__orange .showtime__a-orange:hover{
+    color: black
+}
+.showtime__orange .showtime__span{
+    font-weight: bold;
+    margin-left: 3px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    padding: 8px;
+    color: white;
+    background-color: #505050;
+    border: none;
+    margin-right: 15px;
+}
+
+/* Comming Soon */
+.comingsoon__content{
+    background-color: black;
+}
+.comingsoon__bgIMG{
+    background-image: url("../img/slide-3.png");
+    background-size: cover;
+    color: white;
+}
+.comingsoon__p-content h2{
+    padding-bottom: 30px;
+    border-bottom: 1px solid gray;
+    position: relative;
+}
+.comingsoon__p-content h2::after{
+    content:'';
+    width: 160px;
+    height: 3px;
+    background: linear-gradient(to right, #fbbd61,#ec7532);
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    transition: all 0.5s;
+
+}
+.comingsoon__detail .comingsoon__item-p{
+    color: #ec7532;
+    padding-top: 50px;
+}
+.comingsoon__detail .comingsoon__item-h3{
+    font-size: 2.5rem;
+}
+.comingsoon__detail .comingsoon__calendar{
+    padding: 0 5px;
+}
+.comingsoon__detail .comingsoon__item-p2{
+    padding-top: 20px;
+}
+.comingsoon__detail .comingsoon__item-a{
+    color: #ec7532;
+    text-decoration: none;
+    transition: all 0.5s;
+    padding-top: 20px;
+}
+.comingsoon__detail .comingsoon__item-a:hover{
+    color: #fbbd61;
+}
+.comingsoon__video{
+    position: relative;
+}
+.comingsoon__video img{
+    width: 100%;
+}
+.comingsoon__video button{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top:40%;
+    left: 40%;
+    border: 2px solid #ec7532;
+    background-color: transparent;
+    color: white;
+}
+/* Movie list */
+.movieList{
+    background-color: #101010;
+}
+.movieList__content{
+    width: 78%;
+    margin: 0 auto;
+}
+/* .movieList__item{
+    position: relative;
+} */
+.movieList__item{
+    opacity: 0.3;
+    transition: all 0.5s;
+}
+.movieList__item:hover{
+    opacity: 1;
+}
+.movieList__item:focus{
+    opacity: 1;
+}
+.movieList__item img{
+    border-radius: 10px;
+} 
+.movieList__item h4{
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 5px;
+}
+.movieList__item p{
+    color: white;
+    text-align: center;
+} 
+.movieList__content .active{
+    opacity: 1;
+}
+
+/* Contact */
+.contact__content{
+    text-align: center;
+    padding: 35px 0;
+}
+.contact__content p{
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+.contact__content span{
+    font-size: 2.5rem;
+    color: #ec7532;
+}
+/* Footer */
+footer{
+    background-color: #101010;
+}
+.footer__content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    color: white;
+    justify-content: space-around;
+    border-bottom: 1px solid gray;
+}
+.footer__content h3{
+    color: #ec7532;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+.footer__content p{
+    font-size: 14px;
+    line-height: 14px;
+    transition: all 0.5s;
+}
+.footer__content p:hover{
+    color: #fbbd61;
+}
+.footer__content .footer__item i{
+    padding-right: 15px;
+}
+.footer__p{
+    color: white;
+    padding: 20px 0 20px 135px;
+}
+.modal-content{
+    width: 600px;
+    height: 500px;
+}
+.modal-body .video__content{
+    width: 560px;
+    height: 450px;
+
+}
+
+/* Responsive */
+@media screen and (max-width:768px){
+    .carousel-item__caption h1{
+        font-size: 35px;
+    } 
+    /* showtime */
+    .showtimes ul{
+        display: block;
+    }
+    .showtimes .nav-tabs .nav-link::after{
+        background: none;
+        width: 0;
+        height: 0;
+    }
+
+    .comingsoon__detail{
+        display: block;
+    }
+    .footer__content{
+        display: block;
+    }
+    .modal-content{
+        width: 400px;
+        height: 420px;
+        background-color: transparent;
+    }
+    .modal-body .video__content{
+        width: 380px;
+        height: 360px;
+    } 
+    p{
+        font-size: 15px;
+    }
+    
+}
+@media screen and (min-width:774px) and (max-width:991px){
+    .comingsoon__video{
+        margin-top: 80px;
+    }
+    .comingsoon__video button{
+        width: 60px;
+        height: 60px;
+    }
+}
+@media screen and (max-width:576px){
+    .showtime__img{
+        width: 100%;
+    }
+    .comingsoon__detail{
+        display: block;
+    }
+    .movieList__item h4{
+        font-size: 12px;
+    } 
+    .movieList__item p{
+        font-size: 14px;
+    } 
+    h2{
+        font-size: 25px;
+    }
+    /* modal */
+    /* .modal-content{
+        width: 400px;
+        height: 420px;
+    }
+    .modal-body .video__content{
+        width: 380px;
+        height: 360px;
+    }  */
+    
+    
+}
+

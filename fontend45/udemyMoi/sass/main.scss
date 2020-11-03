@@ -1,0 +1,23 @@
+@import './Helper/variables';
+@import './Helper/mixin';
+
+// Vendor
+//file sass của thư viện
+
+@import './Base/reset';
+@import './Base/customize';
+
+@import './Components/buttons';
+
+@import './Layouts/header';
+@import './Layouts/carousel';
+@import './Layouts/intro';
+@import './Layouts/course';
+@import './Layouts/viewing';
+@import './Layouts/banner';
+
+@import './Base/normalized';
+
+//Page
+
+//Theme

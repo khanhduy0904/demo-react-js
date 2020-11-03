@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="description" content="">
+        <title> Demo HTML </title>
+    </head>
+    <body>
+        <!-- css inline -->
+        
+        <h1 class="" id="" style="color:white; background-color:red; text-align: center;" >THE COFFEE HOUSE</h1>
+        <hr style="height:10px; width:800px;" noshade>
+        <hr style="height:10px; width:50%;" noshade>
+        <!-- noshade: giúp thẻ hr hết hiển thị đổ bóng -->
+        <!-- % dùng theo thẻ cha(body). Co dãn theo thẻ cha(kích thước màn hình) -->
+        <!-- a: link -->
+        <!-- Liên kết ngoại: Dẫn qua trang khác ko còn ở trang hiện tại -->
+        <a href="http://https://www.thecoffeehouse.com/"> Đi tới trang the coffee house </a>
+        <!-- Liên kết nội: Click vào đường dẫn nhưng vẫn ở trong trang home
+             Cần có thuộc tính id 
+             Không truyền id đưa về đầu trang web-->
+        <a href="#tea">Đi tới nội dung tea</a>
+        <!-- Lorem: Chữ giả lập -->
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sint dicta distinctio accusamus sed repellat aut pariatur ratione magnam totam libero nulla explicabo quia quos adipisci, ipsam repellendus asperiores eveniet amet quam delectus? Esse sint error dignissimos sequi. Eius, itaque molestiae? Quo nulla voluptatibus repellat ratione dolores voluptate error dignissimos ab neque, accusamus id quia assumenda, quisquam velit saepe ducimus odit cupiditate, nostrum nihil. Expedita unde incidunt soluta dolorem et, officia illum dolor maiores provident repellat quod! Magnam voluptatum libero voluptatem reiciendis eum nam odio consequatur! Veritatis repellendus, iure nesciunt nemo beatae maiores quia provident nisi laboriosam blanditiis voluptate explicabo.
+        </p>
+        <h2 id="tea">TEA</h2>
+        <p>
+            <b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b> <i>Voluptatibus sint dicta distinctio accusamus sed repellat aut pariatur ratione magnam totam libero nulla explicabo quia quos adipisci, ipsam repellendus asperiores eveniet amet quam delectus? Esse sint error dignissimos sequi. Eius, itaque molestiae? Quo nulla voluptatibus repellat ratione dolores voluptate error dignissimos ab neque, accusamus id quia assumenda, quisquam velit saepe ducimus odit cupiditate, nostrum nihil.
+            <br>    
+            </i> <b><i> Expedita unde incidunt soluta dolorem et, officia illum dolor maiores provident repellat quod! Magnam voluptatum libero voluptatem reiciendis eum nam odio consequatur! Veritatis repellendus, iure nesciunt nemo beatae maiores quia provident nisi laboriosam blanditiis voluptate explicabo.</i></b>
+        </p>
+        <!-- Đường dẫn tương đối -->
+        <!-- ./ Vị trí hiện tại của index.html
+             ../ Cấp thư mục cha  -->
+        <img src="./img/blacktea.jpg" alt="Trà đen">
+        <img src="../buoi1_html/img/Buoi1-HTML.png" alt="">
+        <!-- Danh sách
+            1. Không có thứ tự: ul -->
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>    
+        <!-- Emmet: Tạo nhanh các thẻ cha con  VD : ul>li*3-->
+        <!-- Danh sách có thứ tự ol -->
+        <ol type="I">
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ol>
+        <table border="2px" align="center" width="500px" height="300px" cellspacing="" cellspading="10px">  
+            <tr>
+                <!-- th: tiêu đề của bảng
+                    hàng thứ 2 trở di dùng td -->
+                <th colspan="2" bgcolor="red" align="center">Name</th>
+                <th>Type</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td rowspan="4" background="./img/blacktea.jpg">tradional</td>
+                <td rowspan="2"> vietnamese</td>
+                <td>Hot</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>cold</td>
+                <td>28</td>
+            </tr>
+        </table>
+   
+        
+    </body>    
+</html>
+

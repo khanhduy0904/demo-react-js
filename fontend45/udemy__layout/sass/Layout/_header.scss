@@ -1,0 +1,80 @@
+header{
+    @include styleText($color-black-light,$fs-1,$fw-normal);
+}
+
+.header__left{
+    display: flex;
+    .navbar-brand{
+        img{
+            width: 110px;
+        }
+
+    }
+    .categories{
+        flex-grow: 0; 
+        align-self: center;
+        margin-right: 5px;
+    }
+    .headerForm{
+        flex-grow: 7;
+        @include styleFormSearch($color-white-cream,$color-white-cream,$color-gray-6);
+        // .input-group{
+        //     background-color: $color-white-cream;
+        //     border: 1px solid $color-white-cream;
+        //     .form-control{
+        //         background-color: transparent;
+        //         border-color: transparent;
+        //         box-shadow: none;
+        //         transition: none;
+        //         &:focus{
+        //             background-color: $color-white-0;
+        //             border: $color-gray-6;
+        //             border-right-color: transparent;
+        //             & + .input-group-append {
+        //                 .input-group-text{
+        //                     background-color: $color-white-0;
+        //                     border: $color-gray-6;
+        //                     border-left-color: transparent;
+        //                     &:hover{
+        //                         color: $color-white-0;
+        //                         background-color: $color-red-0;
+        //                     }
+        //                 }
+                        
+        //             }
+        //         }
+        //         // &:focus + .input-group-append{}
+        //     }
+        //     .input-group-text{
+        //         background-color: transparent;
+        //         border-color: transparent;
+        //         color: $color-red-0;
+        //         border-radius: 0;
+        //         &:hover{
+        //             color: $color-white-0;
+        //             background-color: $color-red-0;
+        //         }
+        //     }
+            
+        // }
+    }
+}
+.header__right{
+    .navbar-nav{
+        .nav-item{
+            .nav-link{
+                @include styleText($color-black-light,$fs-1,$fw-normal);  
+                z-index: 50;  
+            }
+            &:hover{
+                background-color: $color-gray-1;
+            }
+    }
+    
+    }
+    @include reponsive('extra-large'){
+        .business{
+            display: none;
+        }
+    }
+}

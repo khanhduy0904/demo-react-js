@@ -1,0 +1,25 @@
+@import "./Helper/variables";
+@import "./Helper/mixin";
+// Vendor
+// file sass của thư viện
+@import "./Base/reset";
+@import "./Base/customize";
+
+@import "./Components/button";
+@import "./Layout/header";
+@import "./Layout/carousel";
+@import "./Layout/intro";
+@import "./Layout/course";
+@import "./Layout/viewing";
+@import "./Layout/banner";
+@import "./Layout/categori";
+@import "./Layout/comment";
+@import "./Layout/companies";
+@import "./Layout/footer";
+
+// chinh sua thu vien ngkhac
+@import "./Base/normalized";
+
+// Page
+
+// Theme

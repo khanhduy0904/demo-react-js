@@ -1,0 +1,20 @@
+.modal-content {
+  width: 600px;
+  height: 500px;
+  background: transparent;
+  .video__content {
+    width: 570px;
+    height: 450px;
+  }
+}
+
+@include reponsive("large") {
+  .modal-content {
+    width: 450px;
+    height: 350px;
+    .video__content {
+      width: 400px;
+      height: 300px;
+    }
+  }
+}

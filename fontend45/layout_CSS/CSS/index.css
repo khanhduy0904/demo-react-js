@@ -1,0 +1,94 @@
+/* GLOBAL */
+*{
+    box-sizing: border-box;
+    /* Khai báo để dùng padding ko bị đẩy xuống hàng */
+}
+.clear{
+    clear: both;
+}
+/* HEADER */
+.header img{
+    width: 250px;
+}
+.header ul{
+    list-style: none;
+    background-color: black;
+    padding: 15px;
+}
+.header ul a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+.header ul li{
+    display: inline;
+    margin: 0 20px;
+    /* padding: 30px;  */
+    /* border: 3px solid red; */
+    /* margin: khoảng cách giữa các thẻ */
+    /* paddding: khoảng cách giữa nội dung thẻ đển boder */
+}
+/* CAROUSEL */
+.carousel{
+    background-image: url("../img/slider_1.jpg");
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/* PRODUCT */
+.products h2{
+    text-align: center;
+}
+.products__item{
+    float:left;
+    width: 25%;
+    padding: 0 20px;
+} 
+.products__item img{
+    width: 100%;
+}
+ /* BANNER */
+.banner{
+     background-image: url("../img/nature.jpg");
+     background-size: cover;
+     height: 400px;
+     position: relative;
+ }
+ .banner__circle{
+     position: absolute;
+     /* top right bottom left: đi theo position */
+     top:40px;
+     left: 300px;
+     width: 200px;
+     height: 200px;
+     background-color: rgba(255, 0, 0, 0.5);
+     color: white;
+     text-align: center;
+     border-radius: 50%;
+     /* opacity:Làm trong suốt. Giá trị:0-1 */
+     /* opacity: 0.5; */
+ }
+ /* INTRO */
+ .intro__left, .intro__right{
+    float: left;
+    /* Nhớ clear float */
+    width: 50%;
+    /* Viết gọn khi thuộc tính và gtri giống nhau */
+ }
+ /* .intro__right{
+     float: left;
+     width: 50%;
+ } */
+ .intro__item{
+    padding: 5px 15px 25px;
+}
+ .intro__item1{
+     float: left;
+     width: 50%;
+     padding-bottom: 32px;
+ }
+ .intro__item img{
+     width: 100%;
+     display: block;
+ }

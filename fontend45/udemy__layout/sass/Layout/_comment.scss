@@ -1,0 +1,30 @@
+.comment{
+    background-color: #f7f8fa;
+    .comment__content{
+        width: 80%;
+        margin: 0 auto;
+        padding: $pd-2 0;
+        h2 {
+            @include styleText($color-black-0, $fs-3, $fw-bold-1);
+        }
+        .comment__item{
+            border-radius: unset;
+            .img__name{
+                padding-bottom: $pd-2;
+                img{
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                }
+                span{
+                    text-align: center;
+                    margin-left: $mg-1;
+                    margin-top: $mg-2;
+                }
+            }
+            
+        }
+    }
+}
+
+    

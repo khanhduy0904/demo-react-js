@@ -1,0 +1,18 @@
+@import './Helper/variables';
+@import './Helper/mixin';
+
+// Vendor
+// file sass của thư viện
+@import './Base/reset';
+
+@import './Components/button';
+@import './Layout/header';
+@import './Layout/carousel';
+@import './Layout/movieList';
+@import './Layout/showtime';
+@import './Layout/moviepapaer';
+@import './Layout/banner';
+@import './Layout/footer';
+
+
+@import './Base/normailized';

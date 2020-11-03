@@ -1,0 +1,33 @@
+.udemyCarousel{
+    // duong dan khi dung live server
+    // background-image: url("../../img/cover.jpg");
+    // duong dan khi ko dung live server
+    background-image: url("../img/cover.jpg");
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center center;
+    .udemyCarousel__content{
+        padding-left: 100px;
+        padding-top: 120px;
+        h1{
+            @include styleText($color-white-0,$fs-4,$fw-bold-1);
+        }
+        p{
+            @include styleText($color-white-0,$fs-0 + 3,$fw-normal);
+        }
+        .udemyCarousel__form{
+            @include styleFormSearch($color-white-0,$color-white-0,$color-white-0);
+            .input-group{
+                padding: $pd-0;
+                border: none;
+                &:hover{
+                    border: none;
+                }
+                
+            }
+        }
+    }
+    
+}

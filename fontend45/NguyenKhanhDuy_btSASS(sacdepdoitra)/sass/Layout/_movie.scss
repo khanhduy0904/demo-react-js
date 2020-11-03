@@ -1,0 +1,101 @@
+.movie {
+  .movie__content {
+    position: relative;
+    .over-play {
+      background: linear-gradient(to top, rgb(10, 32, 41), transparent 100%);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    .div-img {
+      // background-image: url("../img/sac-dep-doi-tra-false-beauty-c16-15814133327192.jpg");
+      position: relative;
+      // // background-repeat: no-repeat;
+      // height: 600px;
+      .img-big {
+        width: 100%;
+      }
+      .movie__detail {
+        position: absolute;
+        top: 30%;
+        left: 15%;
+        .img-small {
+          position: relative;
+          img {
+            width: 100%;
+          }
+          .b-play {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            top: 40%;
+            left: 30%;
+            opacity: 0;
+            transition: all 0.5s;
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+          }
+          &:hover {
+            .b-play {
+              opacity: 1;
+            }
+          }
+        }
+        .movie-text {
+          color: white;
+          .c18 {
+            border-radius: $border-radius;
+            background-color: $color-red-0;
+            padding: 2px;
+          }
+          .text-title {
+            font-size: 24px;
+          }
+        }
+        .rate{
+            margin-left: 300px;
+            margin-top: 100px;
+            a{
+                color: white;
+                font-size: 60px;
+                padding: 20px;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                border: 5px solid #7ed321;
+                background-color: rgba(49, 48, 48, 0.534);
+                text-decoration: none;
+            }
+            .movie-stars{
+                @include styleText($color-red-0,$fs-2,$fw-normal );
+            }
+            .movie-text-p{
+                @include styleText($color-white-0,$fs-1 + 2,$fw-normal);
+            }
+        }
+      }
+    }
+  }
+  @include reponsive("extra-large") {
+    .movie__content {
+      .div-img {
+        .movie__detail {
+          top: 10% !important;
+        }
+      }
+    }
+  }
+  @include reponsive("medium") {
+    .movie__content {
+      .div-img {
+        .movie__detail {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+header {
+    @include styleText($color-black-light, $fs-1, $fw-normal);
+}
+// .header{
+// .header__left
+//     &__left{
+//         color: red;
+//     }
+// }
+.header__left {
+    display: flex;
+    .navbar-brand {
+        // flex-grow: 0;
+        img {
+            width: 110px;
+        }
+    }
+    .categories {
+        // flex-grow: 0;
+        align-self: center;
+        margin-right: 5px;
+    }
+    .headerForm {
+        flex-grow: 7;
+        @include styleFormSearch($color-white-cream,$color-white-cream,$color-gray-6);
+        // .input-group {
+        //     background-color: $color-white-cream;
+        //     border: 1px solid $color-white-cream;
+        //     .form-control {
+        //         background-color: transparent;
+        //         border-color: transparent;
+        //         box-shadow: none;
+        //         transition: none;
+        //         &:focus {
+        //             background-color: $color-white-0;
+        //             border-color: $color-gray-6;
+        //             border-right-color: transparent;
+        //             // &:focus + .input-group-append
+        //             & + .input-group-append {
+        //                 .input-group-text {
+        //                     background-color: $color-white-0;
+        //                     border-color: $color-gray-6;
+        //                     border-left-color: transparent;
+        //                     &:hover {
+        //                         background-color: $color-red-0;
+        //                         color: $color-white-0;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        //     .input-group-text {
+        //         background-color: transparent;
+        //         border-color: transparent;
+        //         color: $color-red-0;
+        //         &:hover {
+        //             background-color: $color-red-0;
+        //             color: $color-white-0;
+        //         }
+        //     }
+        // }
+    }
+}
+.header__right{
+    //style right
+
+    //responsive
+    @include responsive('extra-large'){
+        .business,.teach{
+            display: none;
+        }
+    }
+}
+
+ //responsive
